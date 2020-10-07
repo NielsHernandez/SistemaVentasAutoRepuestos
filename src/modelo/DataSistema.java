@@ -8,7 +8,7 @@ package modelo;
 import java.util.ArrayList;
 
 /**
- *
+ * clase data sitemas almacena valores iniciales en memoria
  * @author q669YS4G
  */
 public class DataSistema {
@@ -18,20 +18,34 @@ public class DataSistema {
     public static Producto productos [];
     public static Orden ordenes [];
 
+    /**
+     * metoto statico gerOrdenes devulve un array de tamanio n de ordenes
+     * @return array
+     */
     public static Orden[] getOrdenes() {
         return ordenes;
     }
-
+/**
+ * metodo setOrdenes recive un array de n tamanio del tipo ordenes
+ * @param ordenes ordenes
+ */
     public static void setOrdenes(Orden[] ordenes) {
         DataSistema.ordenes = ordenes;
     }
+    
+    /**
+     * constructo vacio necesario para el programador
+     * @param s recive un string para indicarle que lo usara
+     */
     
     public DataSistema(String s)
     {
         
     }
     
-
+/**
+ * constructo iniica los valores del array de clientes
+ */
     public DataSistema() {
         
         Cliente.idSiguiente=1;
@@ -46,7 +60,10 @@ public class DataSistema {
         clientes[7]= new Empresa("Leonel Garcia",3,"AutoVentas", "", "Empresa");
         
     }
-    
+    /**
+     * constructo 2 inicia los valores de producto
+     * @param var true
+     */
      public DataSistema(boolean var) {
          
         Producto.idSiguientep=2000;
@@ -61,7 +78,12 @@ public class DataSistema {
         productos[7] = new Producto("Shock", 800, "Mazda");
  
     }
-     //metodos auxiliares para busca un cliente existente
+     //metodos auxiliares para busca un cliente existente]
+     /**
+      * metodo getCliente de vuelve un cliente inicial segun index
+      * @param index indice
+      * @return Cliente
+      */
      public Cliente getCliente(int index)
      {
          
@@ -90,6 +112,12 @@ public class DataSistema {
     }
      
      
+     /**
+      * meoto getproducto devuelve un Producto
+      * @param index indeice
+      * @return Producto
+      */
+     
       public Producto getProducto(int index) {
          
         Producto.idSiguientep=2000;
@@ -113,6 +141,10 @@ public class DataSistema {
         
         return null;
     }
+      
+      /**
+       * metood auxiliar void
+       */
      
     public void cargarOrdenes()
     {
@@ -134,17 +166,32 @@ public class DataSistema {
         
     }
     
+    /**
+     * devuleve array de clientes
+     * @return array
+     */
     public static Cliente[] getClientes() {
         return clientes;
     }
-
+/**
+ * recive un array de clientes
+ * @param clientes array
+ */
     public static void setClientes(Cliente[] clientes) {
         DataSistema.clientes = clientes;
     }
+    /**
+     * devuelve un array de producto
+     * @return array
+     */
     
      public static Producto[] getProductos() {
         return productos;
     }
+     /**
+      * recive un array de productos
+      * @param productos array
+      */
 
     public static void setProductos(Producto[] productos) {
         DataSistema.productos = productos;

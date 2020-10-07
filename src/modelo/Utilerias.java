@@ -10,11 +10,17 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 /**
- *
+ * clase Utilerias utilizada para realizar cosas comunes o reutilizables
  * @author q669YS4G
  */
 public class Utilerias {
     
+    
+    /**
+     * devuelve el nombre de la clase
+     * @param nombre
+     * @return string
+     */
     public static String getNombreClase(Class nombre)
     {
         
@@ -23,7 +29,11 @@ public class Utilerias {
         return temp;
         
     }
-    
+    /**
+     * meoto getModena de vuelve la moneta en el formtao es GT
+     * @param valor
+     * @return string
+     */
     public static String getMoneda(int valor)
     {
         

@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 import modelo.LogIN;
 
 /**
- *
+ * clase inicio inicia la aplicacion
  * @author q669YS4G
  */
 public class Inicio extends javax.swing.JFrame {

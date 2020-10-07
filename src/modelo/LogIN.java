@@ -6,11 +6,18 @@
 package modelo;
 
 /**
- *
+ * clase LogIN auxiliar para validar el permiso de los usuarios
  * @author q669YS4G
  */
 public class LogIN {
     
+    
+    /**
+     * metoto boleano valida si el usuario existe
+     * @param usuario nombre de usuario
+     * @param pass contrasena
+     * @return true
+     */
     
     public boolean usuarioExiste(String usuario, String pass)
     {

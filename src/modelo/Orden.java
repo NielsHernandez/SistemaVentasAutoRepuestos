@@ -9,12 +9,14 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- *
+ * clase orden permite la creacion o instanciacion de objectos aparti de esta esta clase
  * @author q669YS4G
  */
 public class Orden {
     
-    
+    /**
+     * nombre de las variables requeridas
+     */
     private int idOrden;
     static int idSigOrden=1;
     private Cliente cliente;
@@ -27,7 +29,9 @@ public class Orden {
     private int diasEnvio;
     
    
-    
+    /**
+     * constructor por defecto inicializa los valores del id, total, fecha
+     */
     
     public Orden(){
         
@@ -36,7 +40,15 @@ public class Orden {
         fechaOrder = new Date();
         idSigOrden++;
     }
-
+/**
+ * constructor recive multiple parametros que hacen posible la creacion de una orden, llama al constructor por defecto por medio de this()
+ * @param cliente objeto cliente
+ * @param articulos array de articulo productos
+ * @param precioEnvio precio de envio
+ * @param tipoEnvio tipo del envio
+ * @param estado estado del envio
+ * @param diasEnvio  dias del envio
+ */
     public Orden(Cliente cliente,ArrayList<ItemOrden> articulos, double precioEnvio, String tipoEnvio, String estado, int diasEnvio) {
         
         this();
@@ -60,80 +72,119 @@ public class Orden {
    
     
    
-
+/**
+ * devuleve el id
+ * @return  int
+ */
     public int getIdOrden() {
         return idOrden;
     }
+    /**
+     * recive un id de ser  necesario
+     * @param idOrden int
+     */
 
     public void setIdOrden(int idOrden) {
         this.idOrden = idOrden;
     }
-
+/**
+ * devuelve el objeto cliente que conforma esta orden
+ * @return Object
+ */
     public Cliente getCliente() {
         return cliente;
     }
+    /**
+     * recive un objeto Cliente de ser necesario
+     * @param cliente Object
+     */
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
-
+/**
+ * devuelve la fecha de la orden
+ * @return string
+ */
     public Date getFechaOrder() {
         return fechaOrder;
     }
+    /**
+     * recive la fecha Date
+     * @param fechaOrder Date
+     */
 
     public void setFechaOrder(Date fechaOrder) {
         this.fechaOrder = fechaOrder;
     }
-
+/**
+ * devulve un array de los articulos a conformar la orden
+ * @return aray
+ */
     public ArrayList<ItemOrden> getArticulos() {
         return articulos;
     }
-
+/**
+ * recive un array de los articulos a conformar la orden
+ */
     public void setArticulos(ArrayList<ItemOrden> articulos) {
         this.articulos = articulos;
     }
+    
+    /**
+     * devuelve el precio de envio
+     * @return double
+     */
 
     public double getPrecioEnvio() {
         return precioEnvio;
     }
-
+/**
+ * recive el precio de envio
+ * @param precioEnvio double
+ */
     public void setPrecioEnvio(double precioEnvio) {
         this.precioEnvio = precioEnvio;
     }
-
+/**
+ * devuelve el total de la orde incluyendo el envio
+ * @return 
+ */
     public double getTotal() {
         return total;
     }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
+    /**
+     * devulve el tipo de envio
+     * @return string
+     */
 
     public String getTipoEnvio() {
         return tipoEnvio;
     }
 
-    public void setTipoEnvio(String tipoEnvio) {
-        this.tipoEnvio = tipoEnvio;
-    }
+/**
+ * devuelve el estado del envio
+ * @return string
+ */
 
     public String getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
+    /**
+     * devuleve los dias de envio
+     * @return int
+     */
 
     public int getDiasEnvio() {
         return diasEnvio;
     }
 
-    public void setDiasEnvio(int diasEnvio) {
-        this.diasEnvio = diasEnvio;
-    }
 
- 
+ /**
+  * metodo sobre escrito toString
+  * @return string
+  */
 
     @Override
     public String toString() {
